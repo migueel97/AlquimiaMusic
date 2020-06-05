@@ -5,8 +5,8 @@ $c = "SELECT * FROM usuarios";
 
 if(!$result = mysqli_query($mysqli, $c)) die();
 
-$usuarios = array(); //creamos un array
-
+$usuarios = array();
+//creamos un array con los datos de la tabla temas*/
 while($row = mysqli_fetch_array($result))
 {
     $Usuario=$row['Usuario'];
@@ -17,12 +17,7 @@ while($row = mysqli_fetch_array($result))
 
 }
 
-//desconectamos la base de datos
-/*$close = mysqli_close($conexion)
-or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
-*/
-
-//Creamos el JSON
+//Creamos el JSON con los datos del array
 $json_string = json_encode($usuarios);
 echo $json_string;
 

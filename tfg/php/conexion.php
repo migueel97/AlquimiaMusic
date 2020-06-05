@@ -1,5 +1,5 @@
 <?php
-
+/*Conexión con la base de datos*/
 $host = "localhost";
 $usuario = "migueel97_tipico";
 $clave = "Contraseña1";

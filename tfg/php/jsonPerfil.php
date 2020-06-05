@@ -5,8 +5,8 @@ $c = "SELECT * FROM temas";
 
 if(!$result = mysqli_query($mysqli, $c)) die();
 
-$temas = array(); //creamos un array
-
+$temas = array();
+//creamos un array con los datos de la tabla temas*/
 while($row = mysqli_fetch_array($result))
 {
     $Id=$row['Id'];
@@ -18,12 +18,7 @@ while($row = mysqli_fetch_array($result))
 
 }
 
-//desconectamos la base de datos
-/*$close = mysqli_close($conexion)
-or die("Ha sucedido un error inexperado en la desconexion de la base de datos");
-*/
-
-//Creamos el JSON
+//Creamos el JSON con los datos del array
 $json_string = json_encode($temas);
 echo $json_string;
 

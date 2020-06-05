@@ -1,3 +1,5 @@
+/*Estilos comunes a toda la página*/
+/******************************************************************************/
 body{
     margin: 0;
     padding: 0;
@@ -9,7 +11,8 @@ body{
     background-image: url(https://www.transparenttextures.com/patterns/gray-floral.png);
     font-size: 1em;
 }
-/***********************************************************************************************/
+/*Estilos de la barra de navegación y sus elementos*/
+/******************************************************************************/
 .navbar{
     align-self: flex-start;
     max-height: 80px;
@@ -34,7 +37,12 @@ body{
 .navbar-toggler{font-size: 40px;}
 .navbar-toggler:focus{outline:none;}
 
-/*****************************************************************************************/
+.nav-item:last-child{
+  margin-right: 8em;
+}
+
+/*Estilos del footer*/
+/******************************************************************************/
 footer{
     align-self: flex-end;
     background-color: #cc00a3 ;
@@ -44,14 +52,29 @@ footer{
     position: fixed;
     bottom: 0;
 }
-/********************************************************************************************/
+
+/*Estilos comunes de la sección principal, independientemente de que la ocupe*/
+/******************************************************************************/
+
+.container{
+    top: 10%;
+    width: 60%;
+    height: 400px;
+    padding: 2%;
+    text-align: center;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+
+/*Estilos de la seccion principal cuando la ocupan artistas o canciones*/
+/******************************************************************************/
+#container{
+    width: 80%;
+}
 
 #container > .row{
     height: 40%;
-}
-
-#container{
-    width: 80%;
 }
 
 #container > .row > div{
@@ -62,6 +85,12 @@ footer{
     background: #a3cc00;
 }
 
+.imagenes{
+    max-width: 50%;
+    max-height: 120px;
+}
+
+/*Estilos de la sección principal cuando esta ocupada por un formulario*/
 /*******************************************************************************************/
 
 #container2, #container3, #container4{
@@ -75,21 +104,13 @@ footer{
     justify-content: center;
 }
 
-.container{
-    top: 10%;
-    width: 60%;
-    height: 400px;
-    padding: 2%;
-    text-align: center;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-}
-
 div > input{
     width:80%;
 }
 
+/*Margins y paddings para los farmularios en función de el espacio que ocupen
+los campos*/
+/******************************************************************************/
 #container4 > div> form > div:first-child{
     padding-top: 5%;
 }
@@ -112,8 +133,4 @@ div > input{
 
 #container2 > div> form > div{
     padding: 5%;
-}
-
-.imagenes{
-    max-width: 50%;
 }

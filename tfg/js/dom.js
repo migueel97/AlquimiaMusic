@@ -15,10 +15,10 @@ if(document.getElementById("subir")){
 function inicio(){
   event.preventDefault();
 
-  cont1 = document.getElementById("container");
-  cont2 = document.getElementById("container2");
-  cont3 = document.getElementById("container3");
-  cont4 = document.getElementById("container4");
+  let cont1 = document.getElementById("container");
+  let cont2 = document.getElementById("container2");
+  let cont3 = document.getElementById("container3");
+  let cont4 = document.getElementById("container4");
 
   if(cont4){
       cont4.remove();
@@ -100,9 +100,9 @@ function inicio(){
 function login(){
     event.preventDefault();
 
-    cont1 = document.getElementById("container");
-    cont2 = document.getElementById("container2");
-    cont3 = document.getElementById("container3");
+    let cont1 = document.getElementById("container");
+    let cont2 = document.getElementById("container2");
+    let cont3 = document.getElementById("container3");
 
     if(cont1){
         cont1.remove();
@@ -157,7 +157,7 @@ function login(){
     newInput1.setAttribute("id", "usuario");
     newInput1.required = true;
 
-    newError1 = document.createElement("span");
+    let newError1 = document.createElement("span");
     newError1.setAttribute("id", "error-nombre");
 
     let newDiv4 = document.createElement("div");
@@ -174,7 +174,7 @@ function login(){
     newInput2.required = true;
     newInput2.setAttribute("id", "passwd");
 
-    newError2 = document.createElement("span");
+    let newError2 = document.createElement("span");
     newError2.setAttribute("id", "error-passwd");
 
     let newDiv7 = document.createElement("div");
@@ -226,9 +226,9 @@ function registro(){
 
   event.preventDefault();
 
-  cont1 = document.getElementById("container");
-  cont2 = document.getElementById("container2");
-  cont3 = document.getElementById("container3");
+  let cont1 = document.getElementById("container");
+  let cont2 = document.getElementById("container2");
+  let cont3 = document.getElementById("container3");
 
   if(cont1){
     cont1.remove();
@@ -285,7 +285,7 @@ function registro(){
   newInput1.required = true;
   newInput1.setAttribute("id", "usuario");
 
-  newError1 = document.createElement("span");
+  let newError1 = document.createElement("span");
   newError1.setAttribute("id", "error-nombre");
 
   let newDiv4 = document.createElement("div");
@@ -303,7 +303,7 @@ function registro(){
   newInput2.required = true;
   newInput2.setAttribute("id", "passwd");
 
-  newError2 = document.createElement("span");
+  let newError2 = document.createElement("span");
   newError2.setAttribute("id", "error-passwd");
 
   let newDiv5 = document.createElement("div");
@@ -320,7 +320,7 @@ function registro(){
   newInput3.required = true;
   newInput3.setAttribute("id", "passwd2");
 
-  newError3 = document.createElement("span");
+  let newError3 = document.createElement("span");
   newError3.setAttribute("id", "error-passwd2");
 
   let newDiv6 = document.createElement("div");
@@ -337,7 +337,7 @@ function registro(){
   newInput4.required = true;
   newInput4.setAttribute("id", "image");
 
-  newError4 = document.createElement("span");
+  let newError4 = document.createElement("span");
   newError4.setAttribute("id", "error-imagen");
 
   let newDiv7 = document.createElement("div");
@@ -402,8 +402,8 @@ function registro(){
 function subir(){
   event.preventDefault();
 
-  cont1 = document.getElementById("container");
-  cont4 = document.getElementById("container4");
+  let cont1 = document.getElementById("container");
+  let cont4 = document.getElementById("container4");
 
   if(cont1){
       cont1.remove();
@@ -434,7 +434,7 @@ function subir(){
   newInput1.required = true;
   newInput1.setAttribute("id", "usuario");
 
-  newError1 = document.createElement("span");
+  let newError1 = document.createElement("span");
   newError1.setAttribute("id", "error-nombre");
 
   let newDiv2 = document.createElement("div");
@@ -451,7 +451,7 @@ function subir(){
   newInput2.required = true;
   newInput2.setAttribute("id", "tema");
 
-  newError2 = document.createElement("span");
+  let newError2 = document.createElement("span");
   newError2.setAttribute("id", "error-audio");
 
   let newDiv3 = document.createElement("div");
@@ -468,7 +468,7 @@ function subir(){
   newInput3.required = true;
   newInput3.setAttribute("id", "image");
 
-  newError3 = document.createElement("span");
+  let newError3 = document.createElement("span");
   newError3.setAttribute("id", "error-imagen");
 
   let newDiv4 = document.createElement("div");
@@ -503,10 +503,10 @@ function subir(){
   let tema = document.getElementById("tema");
 
   nombre.addEventListener("focusout", function(){
-    validar_nombre(nombre)
+    validar_nombre(nombre);
   });
   image.addEventListener("change", function(){
-    validarImagen(image)
+    validarImagen(image);
   });
   tema.addEventListener("change", function(){
     validarAudio(tema);

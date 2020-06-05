@@ -1,4 +1,5 @@
 <?php
+
 session_start();
 
 if(!isset($_SESSION['Id'])){
@@ -47,12 +48,7 @@ if(!isset($_SESSION['Id'])){
           <li class="nav-item">
             <a class="nav-link" id="subir">Subir contenido</a>
           </li>
-          <li class="nav-item">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-            </form>
-          </li>
+   
         </ul>
       </div>
 
@@ -75,33 +71,7 @@ if(!isset($_SESSION['Id'])){
 
     </div>
 
-  <!--  <div class="container" id="container4">
-
-        <form action="formulario.php" method="post">
-
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label>Nombre del tema</label>
-              <input type="text" name="nombre"><br>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label>Tema</label>
-              <input type="file" name="tema"><br>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <label>Foto</label>
-              <input type="file" name="foto"><br>
-            </div>
-            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
-              <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Subir</button>
-            </div>
-        </form>
-          </div>
-
-
-
-    </div>-->
-
-<footer>
+ <footer>
 
   Derechos reservados | Miguel Gomez &copy;
 
