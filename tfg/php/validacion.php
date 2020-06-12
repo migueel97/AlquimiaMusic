@@ -13,7 +13,7 @@
 //funcion para validar audio
      function validar_audio($audio){
        if(isset($audio)&&!empty($audio)){
-         $info = new SplFileInfo($foto);
+         $info = new SplFileInfo($audio);
          $extension = $info->getExtension();
          if($extension == "mp3" || $extension == "ogg" || $extension == "wav"){
            return true;
@@ -24,7 +24,7 @@
 //funcion para validar nombre
      function validar_nombre($nombre){
        if(isset($nombre)&&!empty($nombre)){
-         if(preg_match('/^[a-z\d_\s]{4,20}$/i', $nombre)){
+         if(preg_match('/^[a-z\d_]{4,20}$/i', $nombre)){
            return true;
          }
 

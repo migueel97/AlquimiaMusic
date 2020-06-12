@@ -10,10 +10,10 @@ if(isset($_SESSION['iD'])){
 $usuario = $_POST['usuario'];
 $contraseña = $_POST['passwd'];
 //validamos el usuario y la contraseña
-if(!validar_nombre($usuario) || !validar_contraseña($contraseña)){
+/*if(!validar_nombre($usuario) || !validar_contraseña($contraseña)){
 
   header("location: ../index.html");
-}
+}*/
 //comprobamos que existe un usuario con dicho usuario y contraseña
 $c = "SELECT COUNT(*) as comprobar from usuarios where Usuario = '$usuario' and Contraseña = '$contraseña'";
 $consulta = mysqli_query($mysqli, $c);
@@ -27,6 +27,7 @@ $Id = $array2['var_ses'];
 //si las credenciales son correctas nos loguea, si no nos envia a la pagina principal
 if($array['comprobar']==1){
   $_SESSION['Id'] = $Id;
+  //setcookie('Id', $Id, time()+3600*24*30,'', 'Https://www.eltipicobot.ml/tfg/logueado.php');
   header("location: ../logueado.php");
 }else{
   header("location: ../index.html");

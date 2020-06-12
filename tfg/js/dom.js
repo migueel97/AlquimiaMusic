@@ -42,6 +42,9 @@ function inicio(){
     let newH1 = document.createElement("h1");
     newH1.innerHTML = "Estos son nuestro artistas:";
 
+    let newP = document.createElement("p");
+    newP.setAttribute("id", "p")
+
     let newRow1 = document.createElement("div");
     newRow1.setAttribute("class", "row");
 
@@ -80,8 +83,9 @@ function inicio(){
     newDiv8.setAttribute("class", "col-sm-12 col-md-6 col-lg-3 col-xl-3");
     newDiv8.setAttribute("name", "divs");
 
-    document.body.appendChild(newCont);
+    document.getElementsByTagName("section")[0].appendChild(newCont);
     newCont.appendChild(newH1);
+    newCont.appendChild(newP);
     newCont.appendChild(newRow1);
     newCont.appendChild(newRow2);
     newRow1.appendChild(newDiv1);
@@ -186,8 +190,7 @@ function login(){
     newButton3.setAttribute("class", "btn btn-outline-light my-2 my-sm-0");
     newButton3.innerHTML = "Entra";
 
-
-    document.body.appendChild(newCont);
+    document.getElementsByTagName("section")[0].appendChild(newCont);
     newCont.appendChild(newRow);
     newRow.appendChild(newDiv1);
     newDiv1.appendChild(newButton1);
@@ -297,6 +300,8 @@ function registro(){
   newLabel2.setAttribute("for", "passwd");
   newLabel2.setAttribute("class", "error");
 
+  let newBr = document.createElement("br");
+
   let newInput2 = document.createElement("input");
   newInput2.setAttribute("type", "password");
   newInput2.setAttribute("name", "passwd");
@@ -305,6 +310,8 @@ function registro(){
 
   let newError2 = document.createElement("span");
   newError2.setAttribute("id", "error-passwd");
+
+
 
   let newDiv5 = document.createElement("div");
   newDiv5.setAttribute("class", "col-sm-12 col-md-12 col-lg-12 col-xl-12");
@@ -343,6 +350,31 @@ function registro(){
   let newDiv7 = document.createElement("div");
   newDiv7.setAttribute("class", "col-sm-12 col-md-12 col-lg-12 col-xl-12");
 
+  let newP = document.createElement("p");
+  newP.innerHTML = "Género";
+
+  let newSelect = document.createElement("select");
+  newSelect.setAttribute("class", "select");
+  newSelect.setAttribute("name", "Genero");
+
+  let newOption1 = document.createElement("option");
+  newOption1.innerHTML = "Todos";
+
+  let newOption2 = document.createElement("option");
+  newOption2.innerHTML = "R&B";
+
+  let newOption3 = document.createElement("option");
+  newOption3.innerHTML = "Rap";
+
+  let newOption4 = document.createElement("option");
+  newOption4.innerHTML = "Rock";
+
+  let newOption5 = document.createElement("option");
+  newOption5.innerHTML = "Indie";
+
+  let newDiv8 = document.createElement("div");
+  newDiv8.setAttribute("class", "col-sm-12 col-md-12 col-lg-12 col-xl-12");
+
   let newButton3 = document.createElement("button");
   newButton3.setAttribute("type", "submit");
   newButton3.setAttribute("id", "submitR");
@@ -350,7 +382,7 @@ function registro(){
   newButton3.innerHTML = "Registrate";
 
 
-  document.body.appendChild(newCont);
+  document.getElementsByTagName("section")[0].appendChild(newCont);
   newCont.appendChild(newRow);
   newRow.appendChild(newDiv1);
   newDiv1.appendChild(newButton1);
@@ -364,10 +396,12 @@ function registro(){
   newForm.appendChild(newDiv5);
   newForm.appendChild(newDiv6);
   newForm.appendChild(newDiv7);
+  newForm.appendChild(newDiv8);
   newDiv3.appendChild(newLabel1);
   newDiv3.appendChild(newInput1);
   newDiv3.appendChild(newError1);
   newDiv4.appendChild(newLabel2);
+  newDiv4.appendChild(newBr);
   newDiv4.appendChild(newInput2);
   newDiv4.appendChild(newError2);
   newDiv5.appendChild(newLabel3);
@@ -376,7 +410,13 @@ function registro(){
   newDiv6.appendChild(newLabel4);
   newDiv6.appendChild(newInput4);
   newDiv6.appendChild(newError4);
-  newDiv7.appendChild(newButton3);
+  newDiv7.appendChild(newP);
+  newP.appendChild(newSelect);
+  newSelect.appendChild(newOption2);
+  newSelect.appendChild(newOption3);
+  newSelect.appendChild(newOption4);
+  newSelect.appendChild(newOption5);
+  newDiv8.appendChild(newButton3);
 
   document.getElementById("log2").addEventListener("click", login);
   let nombre = document.getElementById("usuario");
@@ -481,7 +521,7 @@ function subir(){
   newButton.innerHTML = "Subir";
 
 
-  document.body.appendChild(newCont);
+  document.getElementsByTagName("section")[0].appendChild(newCont);
   newCont.appendChild(newForm);
   newForm.appendChild(newDiv1);
   newForm.appendChild(newDiv2);

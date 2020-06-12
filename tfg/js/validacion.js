@@ -14,10 +14,10 @@ function validarAudio(audio){
 
   let mensajeError = "El archivo a adjuntar no es un audio";
   if (!(/\.(mp3|ogg|wav)$/i).test(audio.value)) {
-        document.getElementById("error-audio").textContent = "";
+        document.getElementById("error-audio").textContent = mensajeError;
         return false;
     }
-  document.getElementById("error-audio").textContent = mensajeError;
+  document.getElementById("error-audio").textContent = "";
   return true;
 }
 /*funcion que comprueba si la contraseña cumple los requisitos*/

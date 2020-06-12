@@ -12,8 +12,9 @@ while($row = mysqli_fetch_array($result))
     $Usuario=$row['Usuario'];
     $imagen="/tfg/fotos/" . $row['imagen'];
     $Id=$row['Id'];
+    $Genero=$row['Genero'];
 
-    $usuarios[] = array('Usuario'=> $Usuario, 'imagen'=> $imagen, 'Id'=> $Id);
+    $usuarios[] = array('Usuario'=> $Usuario, 'imagen'=> $imagen, 'Id'=> $Id, 'Genero'=> $Genero);
 
 }
 

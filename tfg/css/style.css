@@ -4,11 +4,10 @@ body{
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    display: flex;
+    /*display: flex;*/
     flex-wrap: wrap;
     font-family: 'Jost', sans-serif;
-    background-color: #00a3cc;
-    background-image: url(https://www.transparenttextures.com/patterns/gray-floral.png);
+    background-color:#FAA299;
     font-size: 1em;
 }
 /*Estilos de la barra de navegación y sus elementos*/
@@ -17,7 +16,7 @@ body{
     align-self: flex-start;
     max-height: 80px;
     width: 100%;
-    background-color:#cc00a3;
+    background-color:#562349;
 }
 
 .nav-link{
@@ -25,7 +24,7 @@ body{
 }
 
 .nav-link:hover{
-    color:  #00a3cc;
+    color: #FEE2B3;
 }
 
 .logo-brand{
@@ -45,7 +44,7 @@ body{
 /******************************************************************************/
 footer{
     align-self: flex-end;
-    background-color: #cc00a3 ;
+    background-color: #562349 ;
     line-height: 3;
     text-align:center;
     width: 100%;
@@ -53,13 +52,26 @@ footer{
     bottom: 0;
 }
 
+section{
+  height: 515px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FEE2B3;
+  width: 80%;
+  padding-top: 3%;
+  padding-bottom: 5%;
+}
+
+footer > p, a > span, footer > a{
+  color: white;
+}
+
 /*Estilos comunes de la sección principal, independientemente de que la ocupe*/
 /******************************************************************************/
 
 .container{
-    top: 10%;
     width: 60%;
-    height: 400px;
+    height: 450px;
     padding: 2%;
     text-align: center;
     -webkit-border-radius: 20px;
@@ -74,27 +86,31 @@ footer{
 }
 
 #container > .row{
-    height: 40%;
+    height: 45%;
+    padding-bottom: 3%;
 }
 
 #container > .row > div{
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
-    border: 2px solid;
-    background: #a3cc00;
+    border: 0px;
+    /*background: #ad6989;*/
 }
 
 .imagenes{
-    max-width: 50%;
-    max-height: 120px;
+    width: 180px;
+    height: 100px;
 }
+
+.like{
+    width: 50px;
+    height: 50px;
+}
+
 
 /*Estilos de la sección principal cuando esta ocupada por un formulario*/
 /*******************************************************************************************/
 
 #container2, #container3, #container4{
-    background: #a3cc00;
+    background: #ad6989;
     justify-content: center;
     align-items: center;
 }
@@ -133,4 +149,53 @@ los campos*/
 
 #container2 > div> form > div{
     padding: 5%;
+}
+/*******************************************************************************/
+.select {
+  position: relative;
+  border: 1px solid #ccc;
+  width: 120px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.select:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 7px 5px 0 5px;
+    border-color: #000000 transparent transparent transparent;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.select select {
+    padding: 5px 8px;
+    width: 130%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+}
+
+.btn-secondary{
+    background-color: #ad6989;
+}
+
+.btn-primary{
+  background-color: #562349;
+}
+
+.btn-primary:hover, .btn-secondary:hover{
+  background-color: #FAA299;
+}
+
+.modal-content{
+  background-color:#FEE2B3;
+  margin-top: 20%;
 }

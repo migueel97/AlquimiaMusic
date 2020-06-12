@@ -1,10 +1,13 @@
 <?php
 
 session_start();
-
-if(!isset($_SESSION['Id'])){
+/*
+if(!isset($_COOKIE['id'])){
   location:("location: index.html");
-}
+}*/
+
+$Id = $_SESSION['Id'];
+setcookie('id', $Id, time()+3600*24*30);
 ?>
 
 <!DOCTYPE html>
@@ -24,6 +27,7 @@ if(!isset($_SESSION['Id'])){
   <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
 
   <!--<script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>-->
+  <script src="https://kit.fontawesome.com/67ade5d31c.js" crossorigin="anonymous"></script>
 
   <title>AlquimiaMusic</title>
 </head>
@@ -40,22 +44,28 @@ if(!isset($_SESSION['Id'])){
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" id="bInicio">Inicio<span class="sr-only">(current)</span></a>
+            <a class="nav-link" id="bInicio"><span>Inicio</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="https://www.eltipicobot.ml/tfg/php/salir.php">Cerrar Sesión</a>
+            <a class="nav-link" href="https://www.eltipicobot.ml/tfg/php/salir.php"><span>Cerrar Sesión</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="subir">Subir contenido</a>
+            <a class="nav-link" id="subir"><span>Subir contenido</span></a>
           </li>
-   
+          <li class="nav-item">
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="text" placeholder = "Buscar" aria-label="Search" id="busqueda">
+              <button id="bBusqueda" class="btn btn-outline-light my-2 my-sm-0">Search</button>
+            </form>
+          </li>
         </ul>
       </div>
 
   </nav>
-
+<section>
     <div class="container" id="container">
       <h1>Estos son nuestros artistas:</h1>
+      <p id="p"></p>
       <div class="row">
           <div name="divs" class="col-sm-12 col-md-6 col-lg-3 col-xl-3"></div>
           <div name="divs" class="col-sm-12 col-md-6 col-lg-3 col-xl-3"></div>
@@ -70,10 +80,10 @@ if(!isset($_SESSION['Id'])){
       </div>
 
     </div>
+</section>
+<footer>
 
- <footer>
-
-  Derechos reservados | Miguel Gomez &copy;
+  <p> Derechos reservados:  Miguel Gomez &copy;</p>
 
 </footer>
 
